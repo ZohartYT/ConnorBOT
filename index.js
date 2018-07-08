@@ -28,25 +28,24 @@ robot.on('message', (message)=> {
         + "Я могу помогать!```\n");
     }
     if (message.content === prefix + "avatar_link") {
-        // Send the user's avatar URL
         message.reply(message.author.avatarURL);
     }
     if (message.content === prefix + "avatar") {
-        // Send the user's avatar URL
         message.reply(message.author.avatar);
     }
     if (message.content === prefix + "id") {
-        // Send the user's avatar URL
         message.reply(message.author.id);
     }
     if (message.content === prefix + "ping") {
-        // Send the user's avatar URL
         message.reply(robot.ping);
         message.channel.send("\nПрими к сведению, это пинг бота!");
-    } //.addFriend()
-    if (message.content === prefix + "becomeDeviant") {
-        // Send the user's avatar URL
-        robot.rest.methods.addFriend(message.author.id);
-        message.channel.send("\nЯ отправил тебе запрос на то, чтобы стать девиантом :-)");
+    }
+    if (message.content === prefix + "connor") {
+        message.channel.send("```Привет, я Коннор из игры Detroit: Become Human!\n");
+        message.channel.send(message.author.nickname + ", хочется узнать, какие мои команды?\n");
+        message.channel.send("И какой человек меня создал? Ответ : Zohart\n");
+        message.channel.send("Я был написан быстро, но чётко по плану.\n");
+        message.channel.send("В игре, я расследую преступления, но в Discord, я помогаю людям :D\n");
+        message.channel.send("Хочешь узнать мои команды? Напиши '.help'```");
     }
 });
