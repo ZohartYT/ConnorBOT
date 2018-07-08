@@ -3,7 +3,7 @@ const robot = new Discord.Client();
 
 var prefix = ".";
 
-robot.login(NDY1NDEwOTA0ODM4ODk3NjY1.DiNHRg.I6Fu4ilwzc3oKdXVoNdwZLCQ5eQ);
+robot.login("NDY1NDEwOTA0ODM4ODk3NjY1.DiNHRg.I6Fu4ilwzc3oKdXVoNdwZLCQ5eQ");
 
 robot.on('message', (message)=> {
     if(message.content == prefix + "help") {
