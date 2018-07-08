@@ -50,7 +50,7 @@ robot.on('message', (message)=> {
         message.channel.send("В игре, я расследую преступления, но в Discord, я помогаю людям :D\n");
         message.channel.send("Хочешь узнать мои команды? Напиши '.help'");
     }
-    if (message.content === prefix + "lastMsg") {
-        message.channel.send(message.author.lastMessage + message.author.lastMessageID);
+    if (message.content === prefix + "role") {
+        message.reply("имя твоей привилегии : " + message.author.role.name);
     }
 });
