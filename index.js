@@ -15,7 +15,7 @@ robot.on('message', (message)=> {
         + "Вот список моих команд!```\n");
     }
     if(message.content == prefix + "cake") {
-        message.channel.send("```fix
+        message.channel.send("```fix"
         + "Да, я дюблю тортики!```\n");
     }
     if(message.content == prefix + "info") {
