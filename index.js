@@ -41,6 +41,7 @@ robot.on('message', (message)=> {
     }
     if (message.content === prefix + "ping") {
         // Send the user's avatar URL
-        message.reply(message.author.ping);
+        message.reply(robot.ping);
+        message.channel.sent("\nПрими к сведению, это пинг бота!");
     }
 });
