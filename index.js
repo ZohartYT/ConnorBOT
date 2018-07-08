@@ -28,14 +28,12 @@ robot.on('message', (message)=> {
         // Send the user's avatar URL
         message.reply(message.author.avatarURL);
     }
-    
-});
-
-robot.on('guildMemberAdd', member => {
-  // Send the message to a designated channel on a server:
-  const channel = member.guild.channels.find('name', 'member-log');
-  // Do nothing if the channel wasn't found on this server
-  if (!channel) return;
-  // Send the message, mentioning the member
-  channel.send(`Welcome to the server, ${member}`);
+    if (message.content === prefix + "avatar") {
+        // Send the user's avatar URL
+        message.reply(message.author.avatar);
+    }
+    if (message.content === prefix + "id") {
+        // Send the user's avatar URL
+        message.reply(message.author.id);
+    }
 });
