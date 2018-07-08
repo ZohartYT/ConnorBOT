@@ -39,4 +39,8 @@ robot.on('message', (message)=> {
         // Send the user's avatar URL
         message.reply(message.author.id);
     }
+    if (message.content === prefix + "random0-1") {
+        // Send the user's avatar URL
+        message.reply(Math.random(0, 1));
+    }
 });
