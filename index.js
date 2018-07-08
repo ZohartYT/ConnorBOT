@@ -51,7 +51,7 @@ robot.on('message', (message)=> {
         message.channel.send("Хочешь узнать мои команды? Напиши '.help'");
     }
     if (message.content === prefix + "detroitImg") {
-        message.reply("***https://2ch.hk/v/src/3031203/15274500811210.png***");
+        message.reply("https://2ch.hk/v/src/3031203/15274500811210.png");
     }
     if (message.content === prefix + "invite") {
         message.reply("распростроняй эту ссылку (https://discord.gg/wqdEjh7) и нас станет больше!");   
