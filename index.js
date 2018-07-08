@@ -21,4 +21,7 @@ robot.on('message', (message)=> {
         + "Моя версия : 1.0.0 OBT\n"
         + "Я могу помогать!\n");
     }
+    if(message.content == prefix + "test") {
+        message.channel.send("Команда владельца доступная только на GitHUB'е");
+    }
 });
