@@ -21,7 +21,20 @@ robot.on('message', (message)=> {
         + "Моя версия : 1.0.0 OBT\n"
         + "Я могу помогать!\n");
     }
-    if(message.content == prefix + "test") {
-        message.channel.send("Команда владельца доступная только на GitHUB'е");
+    if(message.content == prefix + "info") {
+        message.channel.send("Мой создатель : Zohart\n"
+        + "Моя версия : 1.0.0 OBT\n"
+        + "Я могу помогать!\n");
     }
+    if (message.content == prefix + "join") {
+         if (message.member.voiceChannel) {
+            message.member.voiceChannel.join()
+                .then(connection => {
+               message.reply("Я успешно вошёл в канал!");
+              })
+             .catch(console.log);
+           } else {
+              message.reply("Сначало, тебе надо войти в канал!");
+               }
+          }
 });
