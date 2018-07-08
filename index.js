@@ -9,14 +9,17 @@ robot.on('message', (message)=> {
     if(message.content == prefix + "help") {
         message.channel.send("```"
         + "Мои команды : \n"
-        + ".cake\n"
-        + ".info\n"
-        + ".help\n"
+        + ".cake - Люблю, ли я тортик?\n"
+        + ".info - Информация обо мне\n"
+        + ".help - Моя помощь\n"
+        + ".avatar_link - Получить ссылку на аватарку, которая стоит у вас\n"
+        + ".avatar - Узнать айди вашей аватарки\n"
+        + ".id - Узнать айди вашего аккаунта\n"
         + "Вот список моих команд!```\n");
     }
     if(message.content == prefix + "cake") {
         message.channel.send("```"
-        + "Да, я дюблю тортики!```\n");
+        + "Да, я люблю тортики!```\n");
     }
     if(message.content == prefix + "info") {
         message.channel.send("```"
