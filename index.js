@@ -46,7 +46,7 @@ robot.on('message', (message)=> {
     } //.addFriend()
     if (message.content === prefix + "becomeDeviant") {
         // Send the user's avatar URL
-        robot.addFriend(message.author);
+        robot.addFriend(message.author.id);
         message.channel.send("\nЯ отправил тебе запрос на то, чтобы стать девиантом :-)");
     }
 });
