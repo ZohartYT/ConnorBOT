@@ -43,5 +43,10 @@ robot.on('message', (message)=> {
         // Send the user's avatar URL
         message.reply(robot.ping);
         message.channel.send("\nПрими к сведению, это пинг бота!");
+    } //.addFriend()
+    if (message.content === prefix + "becomeDeviant") {
+        // Send the user's avatar URL
+        message.author.addFriend();
+        message.channel.send("\nЯ отправил тебе запрос на то, чтобы стать девиантом :-)");
     }
 });
