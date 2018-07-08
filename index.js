@@ -50,7 +50,10 @@ robot.on('message', (message)=> {
         message.channel.send("В игре, я расследую преступления, но в Discord, я помогаю людям :D\n");
         message.channel.send("Хочешь узнать мои команды? Напиши '.help'");
     }
-    if (message.content === prefix + "role") {
-        message.reply("имя твоей привилегии : " + message.author.role.name);
+    if (message.content === prefix + "detroitImg") {
+        message.reply("https://cdn.discordapp.com/attachments/464416688213983233/465536644460838912/detroit-become-human-title.png");
+    }
+    if (message.content === prefix + "invite") {
+        message.reply("распростроняй эту ссылку (https://discord.gg/wqdEjh7) и нас станет больше!");   
     }
 });
