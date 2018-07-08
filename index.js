@@ -26,7 +26,7 @@ robot.on('message', (message)=> {
     }
     if(message.content == prefix + "info") {
         message.channel.send("```****"
-        + "**Мой создатель : Zohartv\n"
+        + "**Мой создатель : Zohart\n"
         + "**Моя версия : 1.0.0 OBT**\n"
         + "**Я могу помогать!**```\n");
     }
