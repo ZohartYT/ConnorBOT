@@ -39,7 +39,9 @@ robot.on('message', (message)=> {
         // Send the user's avatar URL
         message.reply(message.author.id);
     }
-    if (message.content === prefix + "flip_coin") {
-        message.channel.send("```Выпало : " + getRandomInt(0, 500) + "!```");
+    if (message.content === prefix + "random) {
+        message.channel.send("```Выпало : ");
+        message.channel.send(getRandomInt(0, 500));
+        message.channel.send("!```");
     }
 });
