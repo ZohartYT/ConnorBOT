@@ -41,11 +41,11 @@ robot.on('message', (message)=> {
         message.channel.send("\nПрими к сведению, это пинг бота!");
     }
     if (message.content === prefix + "connor") {
-        message.channel.send("```Привет, я Коннор из игры Detroit: Become Human!\n");
+        message.channel.send("Привет, я Коннор из игры Detroit: Become Human!\n");
         message.channel.send(message.author.nickname + ", хочется узнать, какие мои команды?\n");
         message.channel.send("И какой человек меня создал? Ответ : Zohart\n");
         message.channel.send("Я был написан быстро, но чётко по плану.\n");
         message.channel.send("В игре, я расследую преступления, но в Discord, я помогаю людям :D\n");
-        message.channel.send("Хочешь узнать мои команды? Напиши '.help'```");
+        message.channel.send("Хочешь узнать мои команды? Напиши '.help'");
     }
 });
