@@ -24,11 +24,9 @@ robot.on('message', (message)=> {
         + "Моя версия : 1.0.0 OBT\n"
         + "Я могу помогать!```\n");
     }
-    if(message.content == prefix + "info") {
-        message.channel.send("```"
-        + "Мой создатель : Zohart\n"
-        + "Моя версия : 1.0.0 OBT**\n"
-        + "Я могу помогать!```\n");
+    if (message.content === prefix + "avatar_link") {
+        // Send the user's avatar URL
+        message.reply(message.author.avatarURL);
     }
     
 });
