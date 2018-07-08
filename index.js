@@ -40,7 +40,7 @@ robot.on('message', (message)=> {
         message.reply(message.author.id);
     }
     if (message.content === prefix + "flip_coin") {
-        number = Math.random(0, 1);
+        number = getRandomInt(0, 1);
         if(number == 0) {
             message.channel.send("```Выпал 0```");
         }
