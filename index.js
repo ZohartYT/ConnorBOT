@@ -39,8 +39,13 @@ robot.on('message', (message)=> {
         // Send the user's avatar URL
         message.reply(message.author.id);
     }
-    if (message.content === prefix + "random0-1") {
-        // Send the user's avatar URL
-        message.reply(Math.random(0, 1));
+    if (message.content === prefix + "flip_coin") {
+        number = Math.random(0, 1);
+        if(number == 0) {
+            message.channel.send("```Выпал 0```");
+        }
+        if(number == 1) {
+            message.channel.send("```Выпал 1```");
+        }
     }
 });
