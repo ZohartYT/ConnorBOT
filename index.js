@@ -7,34 +7,28 @@ robot.login("NDY1NDEwOTA0ODM4ODk3NjY1.DiNHRg.I6Fu4ilwzc3oKdXVoNdwZLCQ5eQ");
 
 robot.on('message', (message)=> {
     if(message.content == prefix + "help") {
-        message.channel.send("Мои команды : \n"
+        message.channel.send("```css"
+        + "Мои команды : \n"
         + ".cake\n"
         + ".info\n"
         + ".help\n"
-        + "Вот список моих команд!");
+        + "Вот список моих команд!```\n");
     }
     if(message.content == prefix + "cake") {
-        message.channel.send("Да, я дюблю тортики!\n");
+        message.channel.send("```fix
+        + "Да, я дюблю тортики!```\n");
     }
     if(message.content == prefix + "info") {
-        message.channel.send("Мой создатель : Zohart\n"
+        message.channel.send("```css"
+        + "Мой создатель : Zohart\n"
         + "Моя версия : 1.0.0 OBT\n"
-        + "Я могу помогать!\n");
+        + "Я могу помогать!```\n");
     }
     if(message.content == prefix + "info") {
-        message.channel.send("Мой создатель : Zohart\n"
+        message.channel.send("```css"
+        + "Мой создатель : Zohart\n"
         + "Моя версия : 1.0.0 OBT\n"
-        + "Я могу помогать!\n");
+        + "Я могу помогать!```\n");
     }
-    if (message.content == prefix + "join") {
-         if (message.member.voiceChannel) {
-            message.member.voiceChannel.join()
-                .then(connection => {
-               message.reply("Я успешно вошёл в канал!");
-              })
-             .catch(console.log);
-           } else {
-              message.reply("Сначало, тебе надо войти в канал!");
-               }
-          }
+    
 });
