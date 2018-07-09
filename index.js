@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const robot = new Discord.Client();
+const botSettings = require('./botSettings');
 
 var prefix = ".";
-BOT_TOKEN;
 
-robot.login('BOT_TOKEN');
+robot.login(botSettings.BOT_TOKEN);
 
 robot.on('message', (message)=> {
     if(message.content == prefix + "help") {
