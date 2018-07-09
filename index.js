@@ -3,6 +3,9 @@ const robot = new Discord.Client();
 const botSettings = require('./botSettings.json');
 
 var prefix = ".";
+if(botSettings.BOT_TOKEN == '') {
+   console.log('Token is empty!');   
+}
 
 console.log(botSettings.BOT_TOKEN);
 robot.login(botSettings.BOT_TOKEN);
