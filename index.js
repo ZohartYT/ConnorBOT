@@ -4,7 +4,7 @@ const robot = new Discord.Client();
 var prefix = ".";
 var BOT_TOKEN;
 
-robot.login(login);
+robot.login(BOT_TOKEN);
 
 robot.on('message', (message)=> {
     if(message.content == prefix + "help") {
