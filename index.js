@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const robot = new Discord.Client();
-const botSettings = require('./botSettings');
+const botSettings = require('./botSettings.json');
 
 var prefix = ".";
 
