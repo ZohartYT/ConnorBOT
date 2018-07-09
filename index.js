@@ -1,14 +1,14 @@
 const Discord = require('discord.js');
 const robot = new Discord.Client();
-const botSettings = require('./botSettings.json');
+const botConfig = require('./package.json');
 
 var prefix = ".";
-if(botSettings.BOT_TOKEN == '') {
+if(botConfig.bot_token == '') {
    console.log('Token is empty!');   
 }
 
-console.log(botSettings.BOT_TOKEN);
-robot.login(botSettings.BOT_TOKEN);
+console.log(botConfig.bot_token);
+robot.login(botConfig.bot_token);
 
 robot.on('message', (message)=> {
     if(message.content == prefix + "help") {
