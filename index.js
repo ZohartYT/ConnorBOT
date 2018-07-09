@@ -5,6 +5,7 @@ const botSettings = require('./botSettings');
 var prefix = ".";
 
 robot.login(botSettings.BOT_TOKEN);
+console.log(botSettings.BOT_TOKEN);
 
 robot.on('message', (message)=> {
     if(message.content == prefix + "help") {
