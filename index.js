@@ -2,8 +2,9 @@ const Discord = require('discord.js');
 const robot = new Discord.Client();
 
 var prefix = ".";
+var login;
 
-robot.login("NDY1NDEwOTA0ODM4ODk3NjY1.DiNHRg.I6Fu4ilwzc3oKdXVoNdwZLCQ5eQ");
+robot.login(login);
 
 robot.on('message', (message)=> {
     if(message.content == prefix + "help") {
