@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const robot = new Discord.Client();
 
 var prefix = ".";
-var BOT_TOKEN;
+BOT_TOKEN;
 
 robot.login('BOT_TOKEN');
 
