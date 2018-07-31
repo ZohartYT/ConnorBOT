@@ -14,13 +14,13 @@ robot.on('message', (message)=> {
         message.channel.send("```"
         + "Мои команды : \n"
         + ".cake - Люблю, ли я тортик?\n"
-        + ".info - Информация обо мне\n"
         + ".help - Моя помощь\n"
         + ".avatar_link - Получить ссылку на аватарку, которая стоит у вас\n"
         + ".avatar - Узнать айди вашей аватарки\n"
         + ".id - Узнать айди вашего аккаунта\n"
         + ".ping - Показать пинг бота\n"
         + ".connor - Выслушать 'занимательную' историю\n"
+        + ".detroitImg - Я покажу тебе пейзаж Detroit: Become Human\n"
         + "Вот список моих команд!```\n");
     }
     if(message.content == prefix + "cake") {
@@ -53,10 +53,5 @@ robot.on('message', (message)=> {
     }
     if (message.content === prefix + "invite") {
         message.reply("распростроняй эту ссылку (https://discord.gg/wqdEjh7) и нас станет больше!");   
-    }
-    if (message.content === prefix + "info") {
-        message.channel.send("• Users      :: ${this.client.users.size.toLocaleString()}"
-         + "• Servers    :: " + this.client.guilds.size.toLocaleString()
-         + "• Channels   :: " + this.client.channels.size.toLocaleString();
     }
 });
