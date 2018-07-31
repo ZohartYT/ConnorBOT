@@ -21,6 +21,7 @@ robot.on('message', (message)=> {
         + ".ping - Показать пинг бота\n"
         + ".connor - Выслушать 'занимательную' историю\n"
         + ".detroitImg - Я покажу тебе пейзаж Detroit: Become Human\n"
+        + ".invite - Я покажу приглашение на сервер DemonRP\n"
         + "Вот список моих команд!```\n");
     }
     if(message.content == prefix + "cake") {
