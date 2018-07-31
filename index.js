@@ -27,12 +27,6 @@ robot.on('message', (message)=> {
         message.channel.send("```"
         + "Да, я люблю тортики!```\n");
     }
-    if(message.content == prefix + "info") {
-        message.channel.send("```"
-        + "Мой создатель : Zohart\n"
-        + "Моя версия : 2.0 RELOADED\n"
-        + "Я могу помогать!```\n");
-    }
     if (message.content === prefix + "avatar_link") {
         message.reply(message.author.avatarURL);
     }
@@ -47,17 +41,22 @@ robot.on('message', (message)=> {
         message.channel.send("\nПрими к сведению, это пинг бота!");
     }
     if (message.content === prefix + "connor") {
-        message.channel.send("Привет, я Коннор из игры Detroit: Become Human!\n");
-        message.channel.send("Тебе хочется узнать, какие мои команды?\n");
-        message.channel.send("И какой человек меня создал? Ответ : Zohart\n");
-        message.channel.send("Я был написан быстро, но чётко по плану.\n");
-        message.channel.send("В игре, я расследую преступления, но в Discord, я помогаю людям :D\n");
-        message.channel.send("Хочешь узнать мои команды? Напиши '.help'");
+        message.channel.send("```Привет, я Коннор из игры Detroit: Become Human!\n"
+        + "Тебе хочется узнать, какие мои команды?\n"
+        + "И какой человек меня создал? Ответ : Zohart\n"
+        + "Я был написан быстро, но чётко по плану.\n"
+        + "В игре, я расследую преступления, но в Discord, я помогаю людям :D\n"
+        + "Хочешь узнать мои команды? Напиши '.help'```");
     }
     if (message.content === prefix + "detroitImg") {
         message.reply("https://2ch.hk/v/src/3031203/15274500811210.png");
     }
     if (message.content === prefix + "invite") {
         message.reply("распростроняй эту ссылку (https://discord.gg/wqdEjh7) и нас станет больше!");   
+    }
+    if (message.content === prefix + "info") {
+        message.channel.send("• Users      :: ${this.client.users.size.toLocaleString()}"
+         + "• Servers    :: " + this.client.guilds.size.toLocaleString()
+         + "• Channels   :: " + this.client.channels.size.toLocaleString();
     }
 });
