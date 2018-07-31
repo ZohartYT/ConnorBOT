@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const robot = new Discord.Client();
-const botConfig = require('./package.json');
 
 var prefix = ".";
 if(botConfig.bot_token == '') {
@@ -31,7 +30,7 @@ robot.on('message', (message)=> {
     if(message.content == prefix + "info") {
         message.channel.send("```"
         + "Мой создатель : Zohart\n"
-        + "Моя версия : 1.0.0 OBT\n"
+        + "Моя версия : 2.0 RELOADED\n"
         + "Я могу помогать!```\n");
     }
     if (message.content === prefix + "avatar_link") {
