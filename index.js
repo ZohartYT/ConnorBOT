@@ -69,13 +69,13 @@ robot.on('message', (message)=> {
     if (message.content.search('postSurvey2 ') != -1)  {
         const msgfN = message.content.replace('cb!postSurvey2 ', '', message.content);
         const channel = robot.channels.get("542310286380761109");
-        const sendMsg = channel.send('- @everyone | **Опрос** | @here -\n'
+        channel.send('- @everyone | **Опрос** | @here -\n'
         + '```' + msgfN + '```\n'
         + '\n'
         + 'Спасибо за внимание\n'
         + 'Created by Zohart');
-        sendMsg.message.react(':one:');
-        sendMsg.message.react(':two:');
+        message.react(':one:');
+        message.react(':two:');
         return "";
     }
     if (message.content.search('postSurvey3 ') != -1)  {
