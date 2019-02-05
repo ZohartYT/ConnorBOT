@@ -74,8 +74,8 @@ robot.on('message', (message)=> {
         + '\n'
         + 'Спасибо за внимание\n'
         + 'Created by Zohart');
-        msg.react(':one:');
-        msg.react(':two:');
+        msg.message.react(':one:');
+        msg.message.react(':two:');
         return "";
     }
     if (message.content.search('postSurvey3 ') != -1)  {
