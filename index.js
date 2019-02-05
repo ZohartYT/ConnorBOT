@@ -68,7 +68,7 @@ robot.on('message', (message)=> {
     }
     if (message.content.search('postSurvey2 ') != -1)  {
         const msgfN = message.content.replace('cb!postSurvey2 ', '', message.content);
-        const msgfN = message.content.replace('|', '', msgfN);
+        msgfN = message.content.replace('|', '', msgfN);
         const channel = robot.channels.get("542310286380761109");
         channel.send('- @everyone | **Опрос** | @here -\n'
         + '```' + msgfN + '```\n'
