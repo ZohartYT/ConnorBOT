@@ -66,7 +66,7 @@ robot.on('message', (message)=> {
         const msgfN = message.content.replace(prefix + 'postDevblog ', '', message.content);
         const channel = robot.channels.get("542310286380761109");
         channel.send('- @everyone | **Devblog** | @here -\n'
-        + '```Новая обнова!```\n' + msgfN + '\n'
+        + '```Новая обнова!\n' + msgfN + '```\n'
         + '\n'
         + 'Спасибо за внимание\n'
         + 'Created by Zohart');
