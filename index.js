@@ -67,8 +67,8 @@ robot.on('message', (message)=> {
         return "";
     }
     if (message.content.search('postSurvey2 ') != -1)  {
-        const msgfN = message.content.replace('cb!postSurvey2 ', '', message.content);
-        msgfN = message.content.replace('|', '', msgfN);
+        const msgfN1 = message.content.replace('cb!postSurvey2 ', '', message.content);
+        const msgfN = msgfN1.replace('|', '', msgfN1);
         const channel = robot.channels.get("542310286380761109");
         channel.send('- @everyone | **Опрос** | @here -\n'
         + '```' + msgfN + '```\n'
