@@ -63,7 +63,7 @@ robot.on('message', (message)=> {
         return "";
     }
     if (message.content.search(prefix + 'postDevblog ') != -1)  {
-        const msgfN = message.content.replace(prefix + 'postSurvey2 ', '', message.content);
+        const msgfN = message.content.replace(prefix + 'postDevblog ', '', message.content);
         const channel = robot.channels.get("542310286380761109");
         channel.send('- @everyone | **Devblog** | @here -\n'
         + '```Новая обнова!```\n' + msgfN + '\n'
