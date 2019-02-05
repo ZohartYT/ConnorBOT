@@ -52,7 +52,7 @@ robot.on('message', (message)=> {
         message.reply("https://2ch.hk/v/src/3031203/15274500811210.png");
     }
     if (message.content.search(prefix + 'postNews ') != -1)  {
-        if (message.author.username === "◊ Žŏħāřť ◊" || message.author.username === "Mafor") {}
+        if (message.author.username === "◊ Žŏħāřť ◊" || message.author.username === "Mafor") {
         const msgfN = message.content.replace(prefix + 'postNews ', '', message.content);
         const channel = robot.channels.get("542310286380761109");
         channel.send('- @everyone | **Новости** | @here -\n'
@@ -60,7 +60,7 @@ robot.on('message', (message)=> {
         + '\n'
         + 'Спасибо за внимание\n'
         + 'Отправил: ' + message.author.id);
-    }   else{
+        }else{
         message.reply('извини, но ты не можешь запостить новость!')
     }
         return "";
