@@ -21,7 +21,6 @@ robot.on('message', (message)=> {
         + "cb!ping - Показать пинг бота\n"
         + "cb!connor - Выслушать 'занимательную' историю\n"
         + "cb!detroitImg - Я покажу тебе пейзаж Detroit: Become Human\n"
-        + "cb!invite - Я покажу приглашение на сервер DemonRP\n"
         + "Вот список моих команд!```\n");
     }
     if(message.content == prefix + "cake") {
@@ -52,11 +51,8 @@ robot.on('message', (message)=> {
     if (message.content === prefix + "detroitImg") {
         message.reply("https://2ch.hk/v/src/3031203/15274500811210.png");
     }
-    if (message.content === prefix + "invite") {
-        message.reply("распростроняй эту ссылку (https://discord.gg/H7yywKJ) и нас станет больше!");   
-    }
-    if (message.content.search('postNews ') != -1)  {
-        const msgfN = message.content.replace('cb!postNews ', '', message.content);
+    if (message.content.search(prefix + 'postNews ') != -1)  {
+        const msgfN = message.content.replace(prefix + 'postNews ', '', message.content);
         const channel = robot.channels.get("542310286380761109");
         channel.send('- @everyone | **Новости** | @here -\n'
         + '```' + msgfN + '```\n'
@@ -66,47 +62,11 @@ robot.on('message', (message)=> {
         
         return "";
     }
-    if (message.content.search('postSurvey2 ') != -1)  {
-        const msgfN1 = message.content.replace('cb!postSurvey2 ', '', message.content);
-        const msgfN = msgfN1.replace('|', '', msgfN1);
+    if (message.content.search(prefix + 'postDevblog ') != -1)  {
+        const msgfN = message.content.replace(prefix + 'postSurvey2 ', '', message.content);
         const channel = robot.channels.get("542310286380761109");
-        channel.send('- @everyone | **Опрос** | @here -\n'
-        + '```' + msgfN + '```\n'
-        + '\n'
-        + 'Спасибо за внимание\n'
-        + 'Created by Zohart').then(function (message) {
-            message.react(':one:');
-            message.react(':two:');
-        }).catch(function() {
-            channel.send('Увы что-то пошло не так! Код ошибки :: 306');
-        });
-        return "";
-    }
-    if (message.content.search('postSurvey3 ') != -1)  {
-        const msgfN = message.content.replace('cb!postSurvey3 ', '', message.content);
-        const channel = robot.channels.get("542310286380761109");
-        channel.send('- @everyone | **Опрос** | @here -\n'
-        + '```' + msgfN + '```\n'
-        + '\n'
-        + 'Спасибо за внимание\n'
-        + 'Created by Zohart');
-        return "";
-    }
-    if (message.content.search('postSurvey4 ') != -1)  {
-        const msgfN = message.content.replace('cb!postSurvey4 ', '', message.content);
-        const channel = robot.channels.get("542310286380761109");
-        channel.send('- @everyone | **Опрос** | @here -\n'
-        + '```' + msgfN + '```\n'
-        + '\n'
-        + 'Спасибо за внимание\n'
-        + 'Created by Zohart');
-        return "";
-    }
-    if (message.content.search('postSurvey5 ') != -1)  {
-        const msgfN = message.content.replace('cb!postSurvey5 ', '', message.content);
-        const channel = robot.channels.get("542310286380761109");
-        channel.send('- @everyone | **Опрос** | @here -\n'
-        + '```' + msgfN + '```\n'
+        channel.send('- @everyone | **Devblog** | @here -\n'
+        + '```Новая обнова!```\n' + msgfN + '\n'
         + '\n'
         + 'Спасибо за внимание\n'
         + 'Created by Zohart');
