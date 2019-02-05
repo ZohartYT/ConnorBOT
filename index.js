@@ -58,7 +58,7 @@ robot.on('message', (message)=> {
     }
     if (message.content.search('postNews ') != -1)  {
         const msgfN = message.content.replace('cb!postNews ', '', message.content);
-        const channel = robot.channels.get(config.channelID_news);
+        const channel = robot.channels.get(conf.channelID_news);
         channel.send('- @everyone | **Новости** | @here -\n'
         + '```' + msgfN + '```\n'
         + '\n'
@@ -69,7 +69,7 @@ robot.on('message', (message)=> {
     }
     if (message.content.search('postSurvey2 ') != -1)  {
         const msgfN = message.content.replace('cb!postSurvey2 ', '', message.content);
-        const channel = robot.channels.get(config.channelID_survey);
+        const channel = robot.channels.get(conf.channelID_survey);
         const sendMsg = channel.send('- @everyone | **Опрос** | @here -\n'
         + '```' + msgfN + '```\n'
         + '\n'
@@ -81,7 +81,7 @@ robot.on('message', (message)=> {
     }
     if (message.content.search('postSurvey3 ') != -1)  {
         const msgfN = message.content.replace('cb!postSurvey3 ', '', message.content);
-        const channel = robot.channels.get(config.channelID_survey);
+        const channel = robot.channels.get(conf.channelID_survey);
         channel.send('- @everyone | **Опрос** | @here -\n'
         + '```' + msgfN + '```\n'
         + '\n'
@@ -91,7 +91,7 @@ robot.on('message', (message)=> {
     }
     if (message.content.search('postSurvey4 ') != -1)  {
         const msgfN = message.content.replace('cb!postSurvey4 ', '', message.content);
-        const channel = robot.channels.get(config.channelID_survey);
+        const channel = robot.channels.get(conf.channelID_survey);
         channel.send('- @everyone | **Опрос** | @here -\n'
         + '```' + msgfN + '```\n'
         + '\n'
@@ -101,7 +101,7 @@ robot.on('message', (message)=> {
     }
     if (message.content.search('postSurvey5 ') != -1)  {
         const msgfN = message.content.replace('cb!postSurvey5 ', '', message.content);
-        const channel = robot.channels.get(config.channelID_survey);
+        const channel = robot.channels.get(conf.channelID_survey);
         channel.send('- @everyone | **Опрос** | @here -\n'
         + '```' + msgfN + '```\n'
         + '\n'
