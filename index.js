@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const robot = new Discord.Client();
-const channel = robot.channels.find('чат', channelName)
+const channel = robot.channels.find('чат')
 
 var prefix = "cb!";
 if(process.env.BOT_TOKEN == '') {
