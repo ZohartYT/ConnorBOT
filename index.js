@@ -52,27 +52,31 @@ robot.on('message', (message)=> {
         message.reply("https://2ch.hk/v/src/3031203/15274500811210.png");
     }
     if (message.content.search(prefix + 'postNews ') != -1)  {
-        if (message.author.username === "◊ Žŏħāřť ◊" || message.author.username === "Mafor") {
+        if (message.author.id === "356780844406538240") {
         const msgfN = message.content.replace(prefix + 'postNews ', '', message.content);
-        const channel = robot.channels.get("542310286380761109");
+        const channel = robot.channels.get("515849668031414282");
         channel.send('- @everyone | **Новости** | @here -\n'
         + '```' + msgfN + '```\n'
         + '\n'
         + 'Спасибо за внимание\n'
-        + 'Отправил: ' + message.author.id);
+        + 'Отправил: ' + message.author.username);
         }else{
         message.reply('извини, но ты не можешь запостить новость!')
-    }
+        }
         return "";
     }
     if (message.content.search(prefix + 'postDevblog ') != -1)  {
+        if (message.author.id === "356780844406538240") {
         const msgfN = message.content.replace(prefix + 'postDevblog ', '', message.content);
-        const channel = robot.channels.get("542310286380761109");
+        const channel = robot.channels.get("537254535467499532");
         channel.send('- @everyone | **Devblog** | @here -\n'
-        + '```Новая обнова!\n' + msgfN + '```\n'
+        + '```' + msgfN + '```\n'
         + '\n'
         + 'Спасибо за внимание\n'
-        + 'Created by Zohart');
+        + 'Отправил: ' + message.author.username);
+        }else{
+        message.reply('извини, но ты не можешь запостить обновление!')
+        }
         return "";
     }
 });
