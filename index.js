@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const conf = require('config.json');
 const robot = new Discord.Client();
 
 var prefix = "cb!";
@@ -57,12 +58,55 @@ robot.on('message', (message)=> {
     }
     if (message.content.search('postNews ') != -1)  {
         const msgfN = message.content.replace('cb!postNews ', '', message.content);
-        const channel = robot.channels.find('чат');
-        channel.send('- @everyone | **Новости!** | @here -\n'
+        const channel = robot.channels.get(config.channelID_news);
+        channel.send('- @everyone | **Новости** | @here -\n'
         + '```' + msgfN + '```\n'
         + '\n'
         + 'Спасибо за внимание\n'
         + 'Created by Zohart');
-        return 
+        
+        return "";
+    }
+    if (message.content.search('postSurvey2 ') != -1)  {
+        const msgfN = message.content.replace('cb!postSurvey2 ', '', message.content);
+        const channel = robot.channels.get(config.channelID_survey);
+        const sendMsg = channel.send('- @everyone | **Опрос** | @here -\n'
+        + '```' + msgfN + '```\n'
+        + '\n'
+        + 'Спасибо за внимание\n'
+        + 'Created by Zohart');
+        sendMsg.message.react(':one:');
+        sendMsg.message.react(':two:');
+        return "";
+    }
+    if (message.content.search('postSurvey3 ') != -1)  {
+        const msgfN = message.content.replace('cb!postSurvey3 ', '', message.content);
+        const channel = robot.channels.get(config.channelID_survey);
+        channel.send('- @everyone | **Опрос** | @here -\n'
+        + '```' + msgfN + '```\n'
+        + '\n'
+        + 'Спасибо за внимание\n'
+        + 'Created by Zohart');
+        return "";
+    }
+    if (message.content.search('postSurvey4 ') != -1)  {
+        const msgfN = message.content.replace('cb!postSurvey4 ', '', message.content);
+        const channel = robot.channels.get(config.channelID_survey);
+        channel.send('- @everyone | **Опрос** | @here -\n'
+        + '```' + msgfN + '```\n'
+        + '\n'
+        + 'Спасибо за внимание\n'
+        + 'Created by Zohart');
+        return "";
+    }
+    if (message.content.search('postSurvey5 ') != -1)  {
+        const msgfN = message.content.replace('cb!postSurvey5 ', '', message.content);
+        const channel = robot.channels.get(config.channelID_survey);
+        channel.send('- @everyone | **Опрос** | @here -\n'
+        + '```' + msgfN + '```\n'
+        + '\n'
+        + 'Спасибо за внимание\n'
+        + 'Created by Zohart');
+        return "";
     }
 });
