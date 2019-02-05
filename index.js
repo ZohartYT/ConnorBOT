@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const robot = new Discord.Client();
-const channel = robot.channels.find('чат', 'чат');
 
 var prefix = "cb!";
 if(process.env.BOT_TOKEN == '') {
@@ -57,7 +56,9 @@ robot.on('message', (message)=> {
         message.reply("распростроняй эту ссылку (https://discord.gg/H7yywKJ) и нас станет больше!");   
     }
     if (message.content === prefix + "postNews") {
-        const msgfN = replace('cb!postNews ', '', message.content)
+        const msgfN = replace('cb!postNews ', '', message.content);
+        const channelName = 'чат';
+        const channel = message.client.channels.find('чат', channelName);
         channel.send('- @everyone @here -\n'
         + '```Новости!```\n'
         + msgfN + '\n'
