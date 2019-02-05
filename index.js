@@ -58,7 +58,7 @@ robot.on('message', (message)=> {
         + '```' + msgfN + '```\n'
         + '\n'
         + 'Спасибо за внимание\n'
-        + 'Created by Zohart');
+        + 'Отправил: ' + message.author.username);
         
         return "";
     }
