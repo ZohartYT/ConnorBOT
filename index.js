@@ -24,24 +24,24 @@ robot.on('message', (message)=> {
         + "cb!invite - Я покажу приглашение на сервер DemonRP\n"
         + "Вот список моих команд!```\n");
     }
-    elseif(message.content == prefix + "cake") {
+    if(message.content == prefix + "cake") {
         message.channel.send("```"
         + "Да, я люблю тортики!```\n");
     }
-    elseif (message.content === prefix + "avatar_link") {
+    if (message.content === prefix + "avatar_link") {
         message.reply(message.author.avatarURL);
     }
-    elseif (message.content === prefix + "avatar") {
+    if (message.content === prefix + "avatar") {
         message.reply(message.author.avatar);
     }
-    elseif (message.content === prefix + "id") {
+    if (message.content === prefix + "id") {
         message.reply(message.author.id);
     }
-    elseif (message.content === prefix + "ping") {
+    if (message.content === prefix + "ping") {
         message.reply(robot.ping);
         message.channel.send("\nПрими к сведению, это пинг бота!");
     }
-    elseif (message.content === prefix + "connor") {
+    if (message.content === prefix + "connor") {
         message.channel.send("```Привет, я Коннор из игры Detroit: Become Human!\n"
         + "Тебе хочется узнать, какие мои команды?\n"
         + "И какой человек меня создал? Ответ : Zohart\n"
@@ -49,13 +49,10 @@ robot.on('message', (message)=> {
         + "В игре, я расследую преступления, но в Discord, я помогаю людям :D\n"
         + "Хочешь узнать мои команды? Напиши '.help'```");
     }
-    elseif (message.content === prefix + "detroitImg") {
+    if (message.content === prefix + "detroitImg") {
         message.reply("https://2ch.hk/v/src/3031203/15274500811210.png");
     }
-    elseif (message.content === prefix + "invite") {
+    if (message.content === prefix + "invite") {
         message.reply("распростроняй эту ссылку (https://discord.gg/H7yywKJ) и нас станет больше!");   
-    }
-    else {
-         message.reply("неизвестная команда!"); 
     }
 });
