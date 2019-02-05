@@ -58,7 +58,7 @@ robot.on('message', (message)=> {
     if (message.content === prefix + "postNews") {
         const msgfN = replace('cb!postNews ', '', message.content);
         const channelName = 'чат';
-        const channel = message.client.channels.find('чат', channelName);
+        const channel = message.client.channels.get('чат', channelName);
         channel.send('- @everyone @here -\n'
         + '```Новости!```\n'
         + msgfN + '\n'
