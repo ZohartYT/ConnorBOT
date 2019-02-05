@@ -56,7 +56,7 @@ robot.on('message', (message)=> {
         message.reply("распростроняй эту ссылку (https://discord.gg/H7yywKJ) и нас станет больше!");   
     }
     if (message.content === prefix + "postNews abcdefg") {
-        const msgfN = replace('cb!postNews ', '', message.content);
+        const msgfN = message.content.replace('cb!postNews ', '', message.content);
         const channel = robot.channels.get('476288054299197450');
         channel.send('- @everyone @here -\n'
         + '```Новости!```\n'
