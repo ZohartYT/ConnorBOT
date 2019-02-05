@@ -57,7 +57,7 @@ robot.on('message', (message)=> {
     }
     if (message.content.search('postNews ') != -1)  {
         const msgfN = message.content.replace('cb!postNews ', '', message.content);
-        const channel = robot.channels.get('476288054299197450');
+        const channel = robot.channels.get('542310286380761109');
         channel.send('- @everyone @here -\n'
         + '```Новости!```\n'
         + msgfN + '\n'
