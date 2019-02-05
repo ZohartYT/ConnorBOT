@@ -68,15 +68,18 @@ robot.on('message', (message)=> {
     }
     if (message.content.search('postSurvey2 ') != -1)  {
         const msgfN = message.content.replace('cb!postSurvey2 ', '', message.content);
+        const msgfN = message.content.replace('|', '', msgfN);
         const channel = robot.channels.get("542310286380761109");
-        const msg = channel.send('- @everyone | **Опрос** | @here -\n'
+        channel.send('- @everyone | **Опрос** | @here -\n'
         + '```' + msgfN + '```\n'
         + '\n'
         + 'Спасибо за внимание\n'
         + 'Created by Zohart').then(function (message) {
             message.react(':one:');
             message.react(':two:');
-        } );
+        }).catch(function() {
+            channel.send('Увы что-то пошло не так! Код ошибки :: 306');
+        });
         return "";
     }
     if (message.content.search('postSurvey3 ') != -1)  {
