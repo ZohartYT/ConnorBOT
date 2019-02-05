@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const robot = new Discord.Client();
 
-var prefix = ".";
+var prefix = "cb!";
 if(process.env.BOT_TOKEN == '') {
    console.log('Token is empty!');   
 }
@@ -13,35 +13,35 @@ robot.on('message', (message)=> {
     if(message.content == prefix + "help") {
         message.channel.send("```"
         + "Мои команды : \n"
-        + ".cake - Люблю, ли я тортик?\n"
-        + ".help - Моя помощь\n"
-        + ".avatar_link - Получить ссылку на аватарку, которая стоит у вас\n"
-        + ".avatar - Узнать айди вашей аватарки\n"
-        + ".id - Узнать айди вашего аккаунта\n"
-        + ".ping - Показать пинг бота\n"
-        + ".connor - Выслушать 'занимательную' историю\n"
-        + ".detroitImg - Я покажу тебе пейзаж Detroit: Become Human\n"
-        + ".invite - Я покажу приглашение на сервер DemonRP\n"
+        + "cb!cake - Люблю, ли я тортик?\n"
+        + "cb!help - Моя помощь\n"
+        + "cb!avatar_link - Получить ссылку на аватарку, которая стоит у вас\n"
+        + "cb!avatar - Узнать айди вашей аватарки\n"
+        + "cb!id - Узнать айди вашего аккаунта\n"
+        + "cb!ping - Показать пинг бота\n"
+        + "cb!connor - Выслушать 'занимательную' историю\n"
+        + "cb!detroitImg - Я покажу тебе пейзаж Detroit: Become Human\n"
+        + "cb!invite - Я покажу приглашение на сервер DemonRP\n"
         + "Вот список моих команд!```\n");
     }
-    if(message.content == prefix + "cake") {
+    elseif(message.content == prefix + "cake") {
         message.channel.send("```"
         + "Да, я люблю тортики!```\n");
     }
-    if (message.content === prefix + "avatar_link") {
+    elseif (message.content === prefix + "avatar_link") {
         message.reply(message.author.avatarURL);
     }
-    if (message.content === prefix + "avatar") {
+    elseif (message.content === prefix + "avatar") {
         message.reply(message.author.avatar);
     }
-    if (message.content === prefix + "id") {
+    elseif (message.content === prefix + "id") {
         message.reply(message.author.id);
     }
-    if (message.content === prefix + "ping") {
+    elseif (message.content === prefix + "ping") {
         message.reply(robot.ping);
         message.channel.send("\nПрими к сведению, это пинг бота!");
     }
-    if (message.content === prefix + "connor") {
+    elseif (message.content === prefix + "connor") {
         message.channel.send("```Привет, я Коннор из игры Detroit: Become Human!\n"
         + "Тебе хочется узнать, какие мои команды?\n"
         + "И какой человек меня создал? Ответ : Zohart\n"
@@ -49,10 +49,13 @@ robot.on('message', (message)=> {
         + "В игре, я расследую преступления, но в Discord, я помогаю людям :D\n"
         + "Хочешь узнать мои команды? Напиши '.help'```");
     }
-    if (message.content === prefix + "detroitImg") {
+    elseif (message.content === prefix + "detroitImg") {
         message.reply("https://2ch.hk/v/src/3031203/15274500811210.png");
     }
-    if (message.content === prefix + "invite") {
+    elseif (message.content === prefix + "invite") {
         message.reply("распростроняй эту ссылку (https://discord.gg/H7yywKJ) и нас станет больше!");   
+    }
+    else {
+         message.reply("неизвестная команда!"); 
     }
 });
