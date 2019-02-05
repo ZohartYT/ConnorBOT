@@ -59,7 +59,7 @@ robot.on('message', (message)=> {
         + '```' + msgfN + '```\n'
         + '\n'
         + 'Спасибо за внимание\n'
-        + 'Отправил: ' + message.author.username);
+        + 'Отправил: ' + message.author.id);
     }   else{
         message.reply('извини, но ты не можешь запостить новость!')
     }
