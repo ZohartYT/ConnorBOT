@@ -133,7 +133,7 @@ robot.on('message', (message)=> {
         } 
         
         // Проверка
-        const msg = message.content.replace(prefix + '@connorbot#набор', '', message.content);
+        const msg = message.content.replace('@connorbot#набор', '', message.content);
         if (type_2 === 3 || type_2 === 2)  {
             if (type_3 === 1)  {
                 if (type_5 === 1)  {
