@@ -88,22 +88,22 @@ robot.on('message', (message)=> {
         var type_5 = 0;
         var type_7 = 0;
 
-        if (message.content.search("2| 1, 5, 7") != -1)  {
+        if (message.content.search("2| 1, 5, 7") != 0)  {
             type_2 = 3;
         }else{
-            if (message.content.search("2| 1, 5") != -1)  {
+            if (message.content.search("2| 1, 5") != 0)  {
                 type_2 = 2;
             }else{
-                if (message.content.search("2| 1") != -1)  {
+                if (message.content.search("2| 1") != 0)  {
                     type_2 = 1;
                 }else{
-                    if (message.content.search("2| 5") != -1)  {
+                    if (message.content.search("2| 5") != 0)  {
                         type_2 = 1;
                     }else{
-                        if (message.content.search("2| 5, 7") != -1)  {
+                        if (message.content.search("2| 5, 7") != 0)  {
                             type_2 = 2;
                         }else{
-                            if (message.content.search("2| 7") != -1)  {
+                            if (message.content.search("2| 7") != 0)  {
                                 type_2 = 1;
                             }
                         }
@@ -112,15 +112,15 @@ robot.on('message', (message)=> {
             }
         }
 
-        if (message.content.search("3| 1") != -1)  {
+        if (message.content.search("3| 1") != 0)  {
             type_3 = 1;
         }
 
-        if (message.content.search("5| Нет") != -1)  {
+        if (message.content.search("5| Нет") != 0)  {
             type_5 = 1;
         }
 
-        if (message.content.search("7| Да") != -1)  {
+        if (message.content.search("7| Да") != 0)  {
             type_7 = 1;
         }
         
