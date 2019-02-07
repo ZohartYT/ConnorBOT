@@ -88,7 +88,7 @@ robot.on('message', (message)=> {
         var type_5 = 0;
         var type_7 = 0;
 
-        if (message.content.search("2) 1, 5, 7") != -1)  {
+        if (message.content.search("2. 1, 5, 7") != -1)  {
             type_2 = 3;
         }else{
             if (message.content.search("2) 1, 5") != -1)  {
