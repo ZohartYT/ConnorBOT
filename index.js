@@ -132,8 +132,7 @@ robot.on('message', (message)=> {
             type_7 = 0;
         } 
 
-        let role = message.guild.roles.find(r => r.name === "Mini-Helper");
-        let member = message.mentions.members.first();
+        let role = message.guild.roles.find('name', "Mini-Helper");
         
         // Проверка
         if (type_2 === 3 || type_2 === 2)  {
@@ -141,7 +140,7 @@ robot.on('message', (message)=> {
                 if (type_5 === 1)  {
                     if (type_7 === 1)  {
                         message.reply("принято, рассмотрел Коннор. Ожидайте звонка администратора проекта.");
-                        member.addRole(role.id);
+                        message.author.addRole(role);
                     }else{
                         message.reply("отказ, рассмотрел Коннор. Причина: Нам нужны люди с микрофоном.");
                     }
