@@ -105,9 +105,7 @@ robot.on('message', (message)=> {
                         }else{
                             if (message.content.search("2| 7") != -1)  {
                                 type_2 = 1;
-                            }else{
-                                type_2 = 0;
-                            } 
+                            }
                         }
                     }
                 } 
@@ -116,21 +114,15 @@ robot.on('message', (message)=> {
 
         if (message.content.search("3| 1") != -1)  {
             type_3 = 1;
-        }else{
-            type_3 = 0;
         }
 
         if (message.content.search("5| Нет") != -1)  {
             type_5 = 1;
-        }else{
-            type_5 = 0;
-        } 
+        }
 
         if (message.content.search("7| Да") != -1)  {
             type_7 = 1;
-        }else{
-            type_7 = 0;
-        } 
+        }
         
         // Проверка
         const msg = message.content.replace('@connorbot#набор', '', message.content);
