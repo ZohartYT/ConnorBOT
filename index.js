@@ -131,27 +131,65 @@ robot.on('message', (message)=> {
         }else{
             type_7 = 0;
         } 
-
-        let role = message.guild.roles.find('name', "Mini-Helper");
         
         // Проверка
         if (type_2 === 3 || type_2 === 2)  {
             if (type_3 === 1)  {
                 if (type_5 === 1)  {
                     if (type_7 === 1)  {
-                        message.reply("принято, рассмотрел Коннор. Ожидайте звонка администратора проекта.");
-                        message.author.addRole(role);
+                        message.reply("заявка отправлена на рассмотрение! Проверил Коннор. Ожидайте звонка администратора проекта.");
+                        const channel = robot.channels.get("543114655892111372");
+                        var balls = type_2+type_3+type_4+type_5+type_7;
+                        channel.send('- @everyone | **Проверена заявка!** | @here -\n'
+                        + '**Отправитель:** ' + message.author.username + '\n'
+                        + '**Баллов:** ' + balls + '\n'
+                        + '\nСообщение:\n'
+                        + '```' + message.content + '```'
+                        + '\n\n'
+                        + 'Не забудьте проверить данного человека: ' + message.author.username + '#' + message.author.tag);
                     }else{
-                        message.reply("отказ, рассмотрел Коннор. Причина: Нам нужны люди с микрофоном.");
+                        message.reply("отказ! Проверил Коннор.");
+                        const channel = robot.channels.get("543114655892111372");
+                        var balls = type_2+type_3+type_4+type_5+type_7;
+                        channel.send('- @everyone | **Заявка с отказом!** | @here -\n'
+                        + '**Отправитель:** ' + message.author.username + '\n'
+                        + '**Баллов:** ' + balls + '\n'
+                        + '**Причина:** Нет микрофона.'
+                        + '\nСообщение:\n'
+                        + '```' + message.content + '```');
                     }
                 }else{
-                    message.reply("отказ, рассмотрел Коннор. Причина: Не надо злоупотреблять правами.");
+                    message.reply("отказ! Проверил Коннор.");
+                    const channel = robot.channels.get("543114655892111372");
+                    var balls = type_2+type_3+type_4+type_5+type_7;
+                    channel.send('- @everyone | **Заявка с отказом!** | @here -\n'
+                    + '**Отправитель:** ' + message.author.username + '\n'
+                    + '**Баллов:** ' + balls + '\n'
+                    + '**Причина:** Желание злоупотреблять правами.'
+                    + '\nСообщение:\n'
+                    + '```' + message.content + '```');
                 }
             }else{
-                message.reply("отказ, рассмотрел Коннор. Причина: Нам нужны люди со стажем.");
+                message.reply("отказ! Проверил Коннор.");
+                const channel = robot.channels.get("543114655892111372");
+                var balls = type_2+type_3+type_4+type_5+type_7;
+                channel.send('- @everyone | **Заявка с отказом!** | @here -\n'
+                + '**Отправитель:** ' + message.author.username + '\n'
+                + '**Баллов:** ' + balls + '\n'
+                + '**Причина:** Нет стажа.'
+                + '\nСообщение:\n'
+                + '```' + message.content + '```');
             }
         }else{
-            message.reply("отказ, рассмотрел Коннор. Причина: Не хватает знаний.");
+            message.reply("отказ! Проверил Коннор.");
+            const channel = robot.channels.get("543114655892111372");
+            var balls = type_2+type_3+type_4+type_5+type_7;
+            channel.send('- @everyone | **Заявка с отказом!** | @here -\n'
+            + '**Отправитель:** ' + message.author.username + '\n'
+            + '**Баллов:** ' + balls + '\n'
+            + '**Причина:** Неправильно ответил на вопросы.'
+            + '\nСообщение:\n'
+            + '```' + message.content + '```');
         }
     }
 });
