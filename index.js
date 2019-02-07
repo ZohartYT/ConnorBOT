@@ -160,7 +160,7 @@ robot.on('message', (message)=> {
         // Проверка
         if (type_2 === 3 || type_2 === 2)  {
             if (type_3 === 1)  {
-                if (type_4 > 2)  {
+                if (type_4 === 3 || type_4 === 4 || type_4 === 5)  {
                     if (type_5 === 1)  {
                         if (type_7 === 1)  {
                             message.reply("принято, рассмотрел Коннор. Ожидайте звонка администратора проекта.");
