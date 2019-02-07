@@ -123,6 +123,8 @@ robot.on('message', (message)=> {
         if (message.content.search("7| Да") != 0)  {
             type_7 = 1;
         }
+        var b = type_2+type_3+type_4+type_5+type_5+type_7;
+        message.reply("Всего: " + b);
         
         // Проверка
         const msg = message.content.replace('@connorbot#набор', '', message.content);
