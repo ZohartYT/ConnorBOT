@@ -81,7 +81,7 @@ robot.on('message', (message)=> {
     }
     if (message.content.search('@connorbot#набор') != -1)  {
 
-        // Подключаем разделы
+        /* Подключаем разделы
         var type_2 = 0;
         var type_3 = 0;
         var type_5 = 0;
@@ -121,69 +121,16 @@ robot.on('message', (message)=> {
 
         if (message.content.search("7| Да") != 0)  {
             type_7 = 1;
-        }
-        var b = type_2+type_3+type_5+type_5+type_7;
-        message.reply("Всего: " + b);
+        }*/
         
-        // Проверка
         const msg = message.content.replace('@connorbot#набор', '', message.content);
-        if (type_2 === 3 || type_2 === 2)  {
-            if (type_3 === 1)  {
-                if (type_5 === 1)  {
-                    if (type_7 === 1)  {
-                        const channel = robot.channels.get("543114655892111372");
-                        var balls = type_2+type_3+type_5+type_7;
-                        channel.send('- @everyone | **Проверена заявка!** | @here -\n'
-                        + '**Отправитель:** ' + message.author.username + '\n'
-                        + '**Баллов:** ' + balls + '\n'
-                        + '\nСообщение:\n'
-                        + '```' + msg + '```'
-                        + '\n\n'
-                        + 'Не забудьте проверить данного человека: ' + message.author.username + '#' + message.author.tag);
-                        message.reply("заявка отправлена на рассмотрение! Проверил Коннор. Ожидайте звонка администратора проекта.");
-                    }else{
-                        const channel = robot.channels.get("543114655892111372");
-                        var balls = type_2+type_3+type_4+type_5+type_7;
-                        channel.send('- @everyone | **Заявка с отказом!** | @here -\n'
-                        + '**Отправитель:** ' + message.author.username + '\n'
-                        + '**Баллов:** ' + balls + '\n'
-                        + '**Причина:** Нет микрофона.'
-                        + '\nСообщение:\n'
-                        + '```' + msg + '```');
-                        message.reply("отказ! Проверил Коннор.");
-                    }
-                }else{
-                    const channel = robot.channels.get("543114655892111372");
-                    var balls = type_2+type_3+type_4+type_5+type_7;
-                    channel.send('- @everyone | **Заявка с отказом!** | @here -\n'
-                    + '**Отправитель:** ' + message.author.username + '\n'
-                    + '**Баллов:** ' + balls + '\n'
-                    + '**Причина:** Желание злоупотреблять правами.'
-                    + '\nСообщение:\n'
-                    + '```' + msg + '```');
-                    message.reply("отказ! Проверил Коннор.");
-                }
-            }else{
-                const channel = robot.channels.get("543114655892111372");
-                var balls = type_2+type_3+type_4+type_5+type_7;
-                channel.send('- @everyone | **Заявка с отказом!** | @here -\n'
-                + '**Отправитель:** ' + message.author.username + '\n'
-                + '**Баллов:** ' + balls + '\n'
-                + '**Причина:** Нет стажа.'
-                + '\nСообщение:\n'
-                + '```' + msg + '```');
-                message.reply("отказ! Проверил Коннор.");
-            }
-        }else{
-            const channel = robot.channels.get("543114655892111372");
-            var balls = type_2+type_3+type_4+type_5+type_7;
-            channel.send('- @everyone | **Заявка с отказом!** | @here -\n'
-            + '**Отправитель:** ' + message.author.username + '\n'
-            + '**Баллов:** ' + balls + '\n'
-            + '**Причина:** Неправильно ответил на вопросы.'
-            + '\nСообщение:\n'
-            + '```' + msg + '```');
-            message.reply("отказ! Проверил Коннор.");
-        }
+        const channel = robot.channels.get("543131822041726987");
+        //var balls = type_2+type_3+type_5+type_7;
+        channel.send('- @everyone | **Новая заявка!** | @here -\n'
+        + '**Отправитель:** ' + message.author.tag + '\n'
+        + '\nСообщение:\n'
+        + '```' + msg + '```');
+        message.reply("заявка отправлена на рассмотрение! Проверил Коннор. Ожидайте звонка администратора проекта.");
+        
     }
 });
