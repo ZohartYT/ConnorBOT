@@ -133,22 +133,22 @@ robot.on('message', (message)=> {
         } 
         
         // Проверка
+        const msg = message.content.replace(prefix + '@connorbot#набор', '', message.content);
         if (type_2 === 3 || type_2 === 2)  {
             if (type_3 === 1)  {
                 if (type_5 === 1)  {
                     if (type_7 === 1)  {
-                        message.reply("заявка отправлена на рассмотрение! Проверил Коннор. Ожидайте звонка администратора проекта.");
                         const channel = robot.channels.get("543114655892111372");
                         var balls = type_2+type_3+type_4+type_5+type_7;
                         channel.send('- @everyone | **Проверена заявка!** | @here -\n'
                         + '**Отправитель:** ' + message.author.username + '\n'
                         + '**Баллов:** ' + balls + '\n'
                         + '\nСообщение:\n'
-                        + '```' + message.content + '```'
+                        + '```' + msg + '```'
                         + '\n\n'
                         + 'Не забудьте проверить данного человека: ' + message.author.username + '#' + message.author.tag);
+                        message.reply("заявка отправлена на рассмотрение! Проверил Коннор. Ожидайте звонка администратора проекта.");
                     }else{
-                        message.reply("отказ! Проверил Коннор.");
                         const channel = robot.channels.get("543114655892111372");
                         var balls = type_2+type_3+type_4+type_5+type_7;
                         channel.send('- @everyone | **Заявка с отказом!** | @here -\n'
@@ -156,10 +156,10 @@ robot.on('message', (message)=> {
                         + '**Баллов:** ' + balls + '\n'
                         + '**Причина:** Нет микрофона.'
                         + '\nСообщение:\n'
-                        + '```' + message.content + '```');
+                        + '```' + msg + '```');
+                        message.reply("отказ! Проверил Коннор.");
                     }
                 }else{
-                    message.reply("отказ! Проверил Коннор.");
                     const channel = robot.channels.get("543114655892111372");
                     var balls = type_2+type_3+type_4+type_5+type_7;
                     channel.send('- @everyone | **Заявка с отказом!** | @here -\n'
@@ -167,10 +167,10 @@ robot.on('message', (message)=> {
                     + '**Баллов:** ' + balls + '\n'
                     + '**Причина:** Желание злоупотреблять правами.'
                     + '\nСообщение:\n'
-                    + '```' + message.content + '```');
+                    + '```' + msg + '```');
+                    message.reply("отказ! Проверил Коннор.");
                 }
             }else{
-                message.reply("отказ! Проверил Коннор.");
                 const channel = robot.channels.get("543114655892111372");
                 var balls = type_2+type_3+type_4+type_5+type_7;
                 channel.send('- @everyone | **Заявка с отказом!** | @here -\n'
@@ -178,10 +178,10 @@ robot.on('message', (message)=> {
                 + '**Баллов:** ' + balls + '\n'
                 + '**Причина:** Нет стажа.'
                 + '\nСообщение:\n'
-                + '```' + message.content + '```');
+                + '```' + msg + '```');
+                message.reply("отказ! Проверил Коннор.");
             }
         }else{
-            message.reply("отказ! Проверил Коннор.");
             const channel = robot.channels.get("543114655892111372");
             var balls = type_2+type_3+type_4+type_5+type_7;
             channel.send('- @everyone | **Заявка с отказом!** | @here -\n'
@@ -189,7 +189,8 @@ robot.on('message', (message)=> {
             + '**Баллов:** ' + balls + '\n'
             + '**Причина:** Неправильно ответил на вопросы.'
             + '\nСообщение:\n'
-            + '```' + message.content + '```');
+            + '```' + msg + '```');
+            message.reply("отказ! Проверил Коннор.");
         }
     }
 });
