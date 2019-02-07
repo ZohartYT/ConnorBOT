@@ -66,7 +66,7 @@ robot.on('message', (message)=> {
         return "";
     }
     if (message.content.search(prefix + 'postDevblog ') != -1)  {
-        if (message.author.id === "356780844406538240") {
+        if (message.author.id === "356780844406538240" || message.author.id === "527803584277118976") {
         const msgfN = message.content.replace(prefix + 'postDevblog ', '', message.content);
         const channel = robot.channels.get("537254535467499532");
         channel.send('- @everyone | **Devblog** | @here -\n'
@@ -78,5 +78,108 @@ robot.on('message', (message)=> {
         message.reply('извини, но ты не можешь запостить обновление!')
         }
         return "";
+    }
+    if (message.content.search('@connorbot#набор') != -1)  {
+
+        // Подключаем разделы
+        var type_2 = 0;
+        var type_3 = 0;
+        var type_4 = 0;
+        var type_5 = 0;
+        var type_7 = 0;
+
+        if (message.content.search('2) 1, 5, 7') != -1)  {
+            type_2 = 3;
+        }else{
+            if (message.content.search('2) 1, 5') != -1)  {
+                type_2 = 2;
+            }else{
+                if (message.content.search('2) 1') != -1)  {
+                    type_2 = 1;
+                }else{
+                    if (message.content.search('2) 5') != -1)  {
+                        type_2 = 1;
+                    }else{
+                        if (message.content.search('2) 5, 7') != -1)  {
+                            type_2 = 2;
+                        }else{
+                            if (message.content.search('2) 7') != -1)  {
+                                type_2 = 1;
+                            }else{
+                                type_2 = 0;
+                            } 
+                        }
+                    }
+                } 
+            }
+        }
+
+        if (message.content.search('3) 1') != -1)  {
+            type_3 = 1;
+        }else{
+            type_3 = 0;
+        }
+
+        if (message.content.search('4) 1') != -1)  {
+            type_4 = 1;
+        }else{
+            if (message.content.search('4) 2') != -1)  {
+                type_4 = 2;
+            }else{
+                if (message.content.search('4) 3') != -1)  {
+                    type_4 = 3;
+                }else{
+                    if (message.content.search('4) 4') != -1)  {
+                        type_4 = 4;
+                    }else{
+                        if (message.content.search('4) 5') != -1)  {
+                            type_4 = 5;
+                        }else{
+                            type_4 = 0;
+                        } 
+                    }
+                }
+            }
+        }
+
+        if (message.content.search('5) Нет') != -1)  {
+            type_5 = 1;
+        }else{
+            type_5 = 0;
+        } 
+
+        if (message.content.search('7) Да') != -1)  {
+            type_7 = 1;
+        }else{
+            type_7 = 0;
+        } 
+
+        let role = message.guild.roles.find(r => r.name === "Mini-Helper");
+        let member = message.mentions.members.first();
+        
+        // Проверка
+        if (type_2 === 3 || type_2 === 2)  {
+            if (type_3 === 1)  {
+                if (type_4 > 2)  {
+                    if (type_5 === 1)  {
+                        if (type_7 === 1)  {
+                            message.reply("принято, рассмотрел Коннор. Ожидайте звонка администратора проекта.");
+                            member.addRole(role).catch(console.error);
+                        }else{
+                            message.reply("отказ, рассмотрел Коннор.");
+                        }
+                    }else{
+                        message.reply("отказ, рассмотрел Коннор.");
+                    }
+                }else{
+                    message.reply("отказ, рассмотрел Коннор.");
+                }
+            }else{
+                message.reply("отказ, рассмотрел Коннор.");
+            }
+        }else{
+            message.reply("отказ, рассмотрел Коннор.");
+        } 
+
     }
 });
