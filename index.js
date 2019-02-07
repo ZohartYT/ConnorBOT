@@ -84,7 +84,6 @@ robot.on('message', (message)=> {
         // Подключаем разделы
         var type_2 = 0;
         var type_3 = 0;
-        var type_4 = 0;
         var type_5 = 0;
         var type_7 = 0;
 
@@ -123,7 +122,7 @@ robot.on('message', (message)=> {
         if (message.content.search("7| Да") != 0)  {
             type_7 = 1;
         }
-        var b = type_2+type_3+type_4+type_5+type_5+type_7;
+        var b = type_2+type_3+type_5+type_5+type_7;
         message.reply("Всего: " + b);
         
         // Проверка
@@ -133,7 +132,7 @@ robot.on('message', (message)=> {
                 if (type_5 === 1)  {
                     if (type_7 === 1)  {
                         const channel = robot.channels.get("543114655892111372");
-                        var balls = type_2+type_3+type_4+type_5+type_7;
+                        var balls = type_2+type_3+type_5+type_7;
                         channel.send('- @everyone | **Проверена заявка!** | @here -\n'
                         + '**Отправитель:** ' + message.author.username + '\n'
                         + '**Баллов:** ' + balls + '\n'
