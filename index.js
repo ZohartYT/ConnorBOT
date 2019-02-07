@@ -141,7 +141,7 @@ robot.on('message', (message)=> {
                 if (type_5 === 1)  {
                     if (type_7 === 1)  {
                         message.reply("принято, рассмотрел Коннор. Ожидайте звонка администратора проекта.");
-                        member.addRole(role).catch(console.error);
+                        member.addRole(role.id);
                     }else{
                         message.reply("отказ, рассмотрел Коннор. Причина: Нам нужны люди с микрофоном.");
                     }
