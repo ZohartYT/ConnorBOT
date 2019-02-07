@@ -120,28 +120,6 @@ robot.on('message', (message)=> {
             type_3 = 0;
         }
 
-        if (message.content.search("4| 1") != -1)  {
-            type_4 = 1;
-        }else{
-            if (message.content.search("4| 2") != -1)  {
-                type_4 = 2;
-            }else{
-                if (message.content.search("4| 3") != -1)  {
-                    type_4 = 3;
-                }else{
-                    if (message.content.search("4| 4") != -1)  {
-                        type_4 = 4;
-                    }else{
-                        if (message.content.search("4| 5") != -1)  {
-                            type_4 = 5;
-                        }else{
-                            type_4 = 0;
-                        } 
-                    }
-                }
-            }
-        }
-
         if (message.content.search("5| Нет") != -1)  {
             type_5 = 1;
         }else{
@@ -160,26 +138,21 @@ robot.on('message', (message)=> {
         // Проверка
         if (type_2 === 3 || type_2 === 2)  {
             if (type_3 === 1)  {
-                if (type_4 === 3 || type_4 === 4 || type_4 === 5)  {
-                    if (type_5 === 1)  {
-                        if (type_7 === 1)  {
-                            message.reply("принято, рассмотрел Коннор. Ожидайте звонка администратора проекта.");
-                            member.addRole(role).catch(console.error);
-                        }else{
-                            message.reply("отказ, рассмотрел Коннор. Причина: Нам нужны люди с микрофоном.");
-                        }
+                if (type_5 === 1)  {
+                    if (type_7 === 1)  {
+                        message.reply("принято, рассмотрел Коннор. Ожидайте звонка администратора проекта.");
+                        member.addRole(role).catch(console.error);
                     }else{
-                        message.reply("отказ, рассмотрел Коннор. Причина: Не надо злоупотреблять правами.");
+                        message.reply("отказ, рассмотрел Коннор. Причина: Нам нужны люди с микрофоном.");
                     }
                 }else{
-                    message.reply("отказ, рассмотрел Коннор. Причина: Игроки вас недооценивают." + type_4);
+                    message.reply("отказ, рассмотрел Коннор. Причина: Не надо злоупотреблять правами.");
                 }
             }else{
                 message.reply("отказ, рассмотрел Коннор. Причина: Нам нужны люди со стажем.");
             }
         }else{
             message.reply("отказ, рассмотрел Коннор. Причина: Не хватает знаний.");
-        } 
-
+        }
     }
 });
